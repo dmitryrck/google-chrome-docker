@@ -1,12 +1,16 @@
-# Google Chrome and Firefox
+**WARNING**:
 
-*WARNING*: This is a work in progress.
+* This is a work in progress
+* I stopped using this in favor of [google-chrome-ram.sh](https://gist.github.com/458b08b041074ebf6ea053a1a193e3e3)
+* I stopped using because when you switch wifi Docker does not connect to the internet anymore, you have to close the container and start again
+
+# Google Chrome and Firefox
 
 Based on [Jess' Dockerfile](https://github.com/jessfraz/dockerfiles/tree/master/chrome/stable).
 
 ## Running
 
-```terminal
+```shell
 $ wget https://raw.githubusercontent.com/jfrazelle/dotfiles/master/etc/docker/seccomp/chrome.json -O chrome.json
 $ docker run --rm \
   --security-opt seccomp=$(pwd)/chrome.json \
